@@ -1,0 +1,16 @@
+{
+    "editor.detectIndentation": false,
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 120,
+    "prettier.proseWrap": "always",
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
+    "prettier.arrowParens": "avoid",
+    "prettier.useTabs": false,
+    "prettier.bracketSpacing": true,
+    "prettier.semi": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+}

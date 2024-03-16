@@ -1,0 +1,27 @@
+<form [formGroup]="todoForm" (ngSubmit)="submit()">
+    <mat-form-field class="todo-text" appearance="outline">
+        <mat-label>Enter todo text</mat-label>
+        <input matInput formControlName="todoText">
+        @if (todoForm.controls['todoText'].value) {
+            <mat-icon
+                class="control-icon"
+                matSuffix
+                (click)="todoForm.controls['todoText'].setValue('')"
+            >close</mat-icon>
+        }
+    </mat-form-field>
+    <mat-form-field class="user-name" appearance="outline">
+        <mat-label>Enter your name</mat-label>
+        <input matInput formControlName="userName">
+        @if (todoForm.controls['userName'].value) {
+            <mat-icon
+                class="control-icon"
+                matSuffix
+                (click)="todoForm.controls['userName'].setValue('')"
+            >close</mat-icon>
+        }
+    </mat-form-field>
+    <button type="submit" mat-button [disabled]="todoForm.invalid" color="primary">Add Todo</button>
+</form>
+
+

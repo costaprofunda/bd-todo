@@ -1,0 +1,11 @@
+<h1 class="header">Todo List</h1>
+<div class="container">
+    <div class="content">
+        <bd-todo-creation (addTodoItem)="addItem($event)"></bd-todo-creation>
+        <bd-todo-list
+            [list]="todoList$ | async"
+            (updateListItem)="updateOrRemoveItem($event)"
+        ></bd-todo-list>
+    </div>
+</div>
+

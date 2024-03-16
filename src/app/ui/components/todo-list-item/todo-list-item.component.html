@@ -1,0 +1,21 @@
+<mat-checkbox
+    class="checkbox"
+    color="primary"
+    [checked]="todoItem.checked"
+    (change)="setChecked($event.checked)">
+</mat-checkbox>
+<div class="todo-text">
+    <mat-form-field class="form-field">
+        @if (textFocused && todoItem.todoText) {
+            <mat-label>Click outside in order to save changes</mat-label>
+        }
+        @if (textFocused && !todoItem.todoText) {
+            <mat-label>Click outside in order to remove todo</mat-label>
+        }
+        <input matInput [(ngModel)]="todoItem.todoText" (focus)="textFocused = true" (blur)="blurFromText()">
+        <mat-icon class="control-icon control-edit" matSuffix>mode_edit</mat-icon>
+        <mat-icon class="control-icon control-remove" matSuffix (click)="clearTodoText()">close</mat-icon>
+    </mat-form-field>
+</div>
+<div class="user-name">by {{ todoItem.userName }}</div>
+

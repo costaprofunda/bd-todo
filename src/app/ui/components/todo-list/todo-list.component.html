@@ -1,0 +1,8 @@
+@for (item of list; track item.id; let first = $first, last = $last) {
+    <bd-todo-list-item
+        [item]="item"
+        [class.first]="first"
+        [class.last]="last"
+        (updateItem)="updateItem($event)"
+    ></bd-todo-list-item>
+}
